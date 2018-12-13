@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProjectTwo.Models.Users>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.userFName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userLName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.userFName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.userLName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.userEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+    </tr>
+}
+
+</table>

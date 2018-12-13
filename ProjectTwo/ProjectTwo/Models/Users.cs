@@ -27,22 +27,22 @@ namespace ProjectTwo.Models
         [Required(ErrorMessage = "Please enter a valid email!")]
         public string userEmail { get; set; }
 
-        [NotMapped]
-        [Compare("userEmail")]
-        [DisplayName("Confirm Email")]
-        [Required(ErrorMessage = "Please confirm your email address")]
-        public string confirmEmail { get; set; }
+        //[NotMapped]
+        //[Compare("userEmail")]
+        //[DisplayName("Confirm Email")]
+        //[Required(ErrorMessage = "Please confirm your email address")]
+        //public string confirmEmail { get; set; }
 
         [DisplayName("Password")]
         [PasswordPropertyText]
         [Required(ErrorMessage = "Please enter your password!")]
         public string password { get; set; }
 
-        [NotMapped]
-        [Compare("password")]
-        [DisplayName("Confirm Password")]
-        [PasswordPropertyText]
-        [Required(ErrorMessage = "Please confirm your password!")]
-        public string confirmPassword { get; set; }
+        //[NotMapped]
+        //[Compare("password")]
+        //[DisplayName("Confirm Password")]
+        //[PasswordPropertyText]
+        //[Required(ErrorMessage = "Please confirm your password!")]
+        //public string confirmPassword { get; set; }
     }
 }
