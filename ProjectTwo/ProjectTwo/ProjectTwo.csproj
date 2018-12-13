@@ -127,6 +127,7 @@
     </Compile>
     <Compile Include="Models\MissionQuestions.cs" />
     <Compile Include="Models\Missions.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -147,6 +148,8 @@
     <Content Include="Views\MissionQuestions\Create.cshtml" />
     <Content Include="Views\MissionQuestions\Edit.cshtml" />
     <Content Include="Views\MissionQuestions\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

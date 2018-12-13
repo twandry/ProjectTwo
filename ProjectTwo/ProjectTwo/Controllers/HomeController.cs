@@ -21,6 +21,16 @@ namespace ProjectTwo.Controllers
             return View();
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Login(FormCollection form, bool rememberMe = false)
         {
@@ -36,7 +46,7 @@ namespace ProjectTwo.Controllers
             if (currentUser.Count() > 0)
             {
                 FormsAuthentication.SetAuthCookie(email, rememberMe);
-                return RedirectToAction("Index", "Home", new { userlogin = email });
+                return RedirectToAction("Index", "MissionQuestions", new { userlogin = email });
             }
             else
             {
@@ -56,12 +66,14 @@ namespace ProjectTwo.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "userID,userFName,userLName,userEmail,password")] Users users)
+        public ActionResult Create([Bind(Include = "userID,userFName,userLName,userEmail,password")] Users users, bool rememberMe = false)
         {
             if (ModelState.IsValid)
             {
+                String email = "userEmail".ToString();
                 db.Users.Add(users);
                 db.SaveChanges();
+                FormsAuthentication.SetAuthCookie(email, rememberMe);
                 return RedirectToAction("Index");
             }
 

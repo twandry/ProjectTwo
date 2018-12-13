@@ -9,34 +9,26 @@ using System.Web.Mvc;
 using ProjectTwo.DAL;
 using ProjectTwo.Models;
 
+
 namespace ProjectTwo.Controllers
 {
+    
     public class MissionQuestionsController : Controller
     {
         private ProjectTwoContext db = new ProjectTwoContext();
 
         // GET: MissionQuestions
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.MissionQuestions.ToList());
         }
 
         // GET: MissionQuestions/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            MissionQuestions missionQuestions = db.MissionQuestions.Find(id);
-            if (missionQuestions == null)
-            {
-                return HttpNotFound();
-            }
-            return View(missionQuestions);
-        }
+      
 
         // GET: MissionQuestions/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -60,6 +52,7 @@ namespace ProjectTwo.Controllers
         }
 
         // GET: MissionQuestions/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
