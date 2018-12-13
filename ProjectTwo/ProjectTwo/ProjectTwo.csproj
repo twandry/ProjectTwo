@@ -119,6 +119,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MissionQuestionsController.cs" />
     <Compile Include="Controllers\MissionsController.cs" />
     <Compile Include="DAL\ProjectTwoContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -143,6 +144,9 @@
     <Content Include="Views\Missions\Details.cshtml" />
     <Content Include="Views\Missions\Edit.cshtml" />
     <Content Include="Views\Missions\Index.cshtml" />
+    <Content Include="Views\MissionQuestions\Create.cshtml" />
+    <Content Include="Views\MissionQuestions\Edit.cshtml" />
+    <Content Include="Views\MissionQuestions\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
