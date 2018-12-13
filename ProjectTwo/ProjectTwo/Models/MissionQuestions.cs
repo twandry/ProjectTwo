@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace ProjectTwo.Models
 {
-   public class MissionQuestions
-   {
-      Table["MissionQuestions"]
+      [Table("MissionQuestions")]
+     
       public class MissionQuestions
       {
          [Key]
@@ -19,5 +21,4 @@ namespace ProjectTwo.Models
          public virtual int? missionID {get;set;}
          public virtual int? userID { get; set; }
       }
-   }
 }
